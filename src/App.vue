@@ -15,7 +15,7 @@
         </el-form-item>
       </el-form>
       <el-divider />
-      <div ref="hotmap" class="p-3">
+      <div ref="heatmap" class="p-3">
         <h2 class="font-bold text-gray-700 pb-3">{{ form.ensOrAddress || 'Someone' }} on Web3</h2>
         <div v-for="calendar in calendars">
           <p class="mt-5 text-gray-700 text-sm mb-2">{{ calendar.year }}: {{ calendar.count }} activities</p>
@@ -184,12 +184,11 @@ if (form.ensOrAddress) {
   generate();
 }
 
-const hotmap = ref<HTMLElement | null>(null)
+const heatmap = ref<HTMLElement | null>(null)
 function download() {
-  console.log('hotmap', hotmap.value);
-  html2canvas(hotmap.value!).then(function (canvas) {
+  html2canvas(heatmap.value!).then(function (canvas) {
     const link = document.createElement('a');
-    link.download = 'hotmap.png';
+    link.download = 'heatmap.png';
     link.href = canvas.toDataURL()
     link.click();
   });
