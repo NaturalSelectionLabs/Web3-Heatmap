@@ -3,7 +3,7 @@
     <el-header class="h-auto">
       <h1 class="font-bold text-xl">Web3 Heatmap</h1>
       <p class="mt-3 text-sm text-gray-500">This is a tool to generate your Web3 activity as a heatmap.</p>
-      <p class="mt-1 mb-2 text-sm text-gray-500">This project is free and <a href="https://github.com/NaturalSelectionLabs/Web3-Heatmap" target="_blank">open source</a> for everyone can get their own heatmap.</p>
+      <p class="mt-1 mb-2 text-sm text-gray-500">This project is free and <a class="underline" href="https://github.com/NaturalSelectionLabs/Web3-Heatmap" target="_blank">open source</a> for everyone can get their own heatmap.</p>
     </el-header>
     <el-main>
       <el-form :model="form" label-width="120px" @submit.prevent>
